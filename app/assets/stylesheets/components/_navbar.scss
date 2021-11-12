@@ -1,12 +1,15 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
-}
+  width: 100%;
+  min-height: 70px;
+  padding: 20px 40px;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  .logo {
+    height: 55px;
+    width: 55px;
+    background-image: url(https://cdn.pixabay.com/photo/2013/07/13/01/21/popcorn-155602_1280.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }

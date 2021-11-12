@@ -1,0 +1,12 @@
+<div class='hero'>
+<div class='hero-opacity'></div>
+<h1><%= @list.name %></h1>
+</div>
+
+<%= link_to "Add a Bookmark", new_list_bookmark_path(@list), class: 'btn btn-secondary' %>
+<%= link_to "back to index", lists_path, class: 'btn btn-primary' %>
+
+<% @list.bookmarks.each do |bookmark| %>
+<%= bookmark.movie.title %>
+<%= bookmark.comment %>
+<% end %>
