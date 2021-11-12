@@ -5,12 +5,15 @@
 
 <div class='container -grid'>
   <% @lists.each do |list| %>
-    <div class="card -override" style="width: 18rem;">
+
+    <div class="card" style="width: 18rem;">
+      <% if list.photo.attached? %>
+      <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill, class: 'card-img-top' %>
+      <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to 'Consulter la liste', list, class:'btn btn-secondary' %>
+        <%= link_to 'Consulter la liste', list, class:'btn btn-primary' %>
       </div>
     </div>
   <% end %>
